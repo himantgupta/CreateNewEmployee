@@ -65,7 +65,7 @@ public class CreateEmployeeLambdaFunctionHandler implements RequestStreamHandler
         	}
         
         try {
-    		outputStream.write(("Created data successfully. You can do get employee to see the new data").getBytes(Charset.forName("UTF-8")));
+    		outputStream.write(new ResponseMessage("Created data successfully. You can do get employee to see the new data").toString().getBytes(Charset.forName("UTF-8")));
         } catch (IOException e) {
     		// TODO Auto-generated catch block
     		e.printStackTrace();
